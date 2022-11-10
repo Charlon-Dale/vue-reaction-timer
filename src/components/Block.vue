@@ -1,5 +1,5 @@
 <template>
-    <div class="block" v-if="showBlock">
+    <div class="block" v-if="showBlock" @click="stopTimer">
         click me
     </div>
 </template>
@@ -11,7 +11,7 @@ export default {
         return{
             showBlock: false,
             timer: null,
-            reactionTime: 0,
+            reactionTime: 0
         }
     },
     mounted() {
@@ -27,7 +27,8 @@ export default {
             })
         },
         stopTimer() {
-            
+            clearInterval(this.timer)
+            console.log(this.reactionTime)
         }
     }
 
