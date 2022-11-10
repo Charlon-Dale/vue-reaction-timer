@@ -22,10 +22,12 @@ export default {
     },
     methods: {
         startTimer() {
-
+            this.timer = setInterval(() => {
+                this.reactionTime += 10
+            })
         },
         stopTimer() {
-
+            
         }
     }
 
