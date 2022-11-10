@@ -1,11 +1,11 @@
 <template>
   <h1>Ninja Reaction Timer</h1>
   <button @click="start">Play Now</button>
-  <Block/>
+  <Block v-if="isPlaying" :delay="delay"/>
 </template>
 
 <script>
-import Block from './components/Block.vue/'
+import Block from './components/Block.vue'
 export default {
   name: 'App',
   components: { Block },
@@ -19,7 +19,6 @@ export default {
     start() {
       this.delay = 2000 + Math.random() * 5000
       this.isPlaying = true
-      console.log(this.delay)
     }
   }
 }
