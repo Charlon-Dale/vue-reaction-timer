@@ -1,6 +1,6 @@
 <template>
   <h1>Ninja Reaction Timer</h1>
-  <button @click="start">Play Now</button>
+  <button @click="start" :disabled="isPlaying">Play Now</button>
   <Block v-if="isPlaying" :delay="delay"/>
 </template>
 
