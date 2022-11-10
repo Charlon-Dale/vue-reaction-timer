@@ -1,6 +1,7 @@
 <template>
   <h1>Ninja Reaction Timer</h1>
   <button @click="start">Play Now</button>
+  <Block/>
 </template>
 
 <script>
