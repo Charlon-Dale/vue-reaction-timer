@@ -2,7 +2,7 @@
   <h1>Ninja Reaction Timer</h1>
   <button @click="start" :disabled="isPlaying">Play Now</button>
   <Block v-if="isPlaying" :delay="delay" @end="endGame" />
-  <Results />
+  <Results v-if="showResults" :score="score" />
 </template>
 
 <script>
